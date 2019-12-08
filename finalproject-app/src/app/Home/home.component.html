@@ -1,1 +1,39 @@
 <h1>{{pageTitle}}</h1>
+
+<section class="textcenter">
+    <!-- <div *ngFor='let movie of movies.results' class="cardpadding"> -->
+    <div (click)="onClickMovie()" class="cardpadding">
+        <div class="card mb-3" style="max-width: 540px;">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <img src = "https://image.tmdb.org/t/p/w200{{movies.results[0].poster_path}}" class="card-img" alt="Movie Poster" >
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">{{movies.results[0].title}}</h5>
+                        <p class="card-text"><small class="text-muted">{{movies.results[0].release_date}}</small></p>
+                        <p class="card-text"><small class="text-muted">{{movies.results[0].overview}}</small></p>
+                        <p>Click Me To See More Movies</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div (click)="onClickShow()" class="cardpadding">
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <img src = "https://image.tmdb.org/t/p/w200{{tvshows.results[0].poster_path}}" class="card-img" alt="Movie Poster" >
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">{{tvshows.results[0].name}}</h5>
+                            <p class="card-text"><small class="text-muted">{{tvshows.results[0].first_air_date}}</small></p>
+                            <p class="card-text"><small class="text-muted">{{tvshows.results[0].overview}}</small></p>
+                            <p>Click Me To See More Tv Shows</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>

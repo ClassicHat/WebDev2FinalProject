@@ -26,8 +26,5 @@ import {TvshowService} from './tvshow.service';
          })
      }//End ngOnInit
 
-     onTvshowClicked():void{
-         //fill with click event data
-     }
 
  }//End TvshowComponent
